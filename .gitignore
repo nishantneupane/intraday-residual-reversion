@@ -1,0 +1,21 @@
+# secrets
+.env
+
+# market data: not redistributable (Alpaca/IEX, Yahoo terms) and large.
+# `make ingest` + `make hdb` rebuild everything from public sources.
+data/raw/
+data/hdb/
+
+# large derived intermediates (rebuilt by the phase 5 scripts)
+data/model/dataset.csv.gz
+data/model/predictions.csv
+*.log
+
+# build artifacts
+cpp/build/
+__pycache__/
+*.pyc
+.DS_Store
+
+# planning notes (local only)
+PLAN.md
